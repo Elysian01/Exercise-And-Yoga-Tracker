@@ -1,0 +1,49 @@
+Pose Counter
+- Push Ups
+- Skipping
+- Squat
+- Pull Up
+- Jumping jack
+
+
+Posture Detection and timing
+- Yoga Tree
+- hold karna wale pose, sabka time limit
+
+- Mobile app
+- 2 alag model ya fir ek mai hii try karegae
+
+
+APP features
+- Calorie burn
+- Data storage
+- Charts
+- Count and goals 
+
+-------------------------------------------
+Technology Stack
+- Tensorflow & python (Opencv)
+- Tensorflow Lite
+- Flutter app
+
+-------------------------------------------
+Info collection, dataset, features
+- Omkar
+- Gladina
+
+Machine Learn
+- Abhishek
+- Ansh
+- Azim
+
+App
+- Azim
+
+Resorces
+-
+
+
+
+
+
+
