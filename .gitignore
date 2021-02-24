@@ -1,2 +1,6 @@
 dataset
 .ipynb_checkpoints
+pretrained_models
+checkpoints_models
+H5_files
+.jovianrc
