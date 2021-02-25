@@ -37,10 +37,10 @@ def rename_and_convert_png_to_jpg(basedir):
 
 if __name__ == '__main__':
 
-    basedir = "dataset\\train"
-    rename_and_convert_png_to_jpg(basedir)
-    png_to_jpg(basedir)
-
-    # basedir = "dataset\\test"
+    # basedir = "dataset\\train"
     # rename_and_convert_png_to_jpg(basedir)
     # png_to_jpg(basedir)
+
+    basedir = "dataset\\test"
+    rename_and_convert_png_to_jpg(basedir)
+    png_to_jpg(basedir)
