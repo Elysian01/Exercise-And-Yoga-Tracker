@@ -135,4 +135,7 @@ function show(el) {
     el.classList.remove("hidden");
 }
 
-initialize();
+
+function loadmodel() {
+    initialize()
+}
