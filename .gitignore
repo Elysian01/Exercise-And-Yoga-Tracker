@@ -1,7 +1,17 @@
+# Files And Folders
 dataset
-.ipynb_checkpoints
 pretrained_models
 checkpoints_models
-H5_files
-.jovianrc
+final_models
+TF_Lite_Models
 recieved_images
+temp
+H5_Models
+
+
+# Extension Files
+*.bin
+.jovianrc
+.ipynb_checkpoints
+*.h5
+*.tflite

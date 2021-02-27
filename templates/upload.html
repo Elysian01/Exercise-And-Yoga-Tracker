@@ -1,0 +1,196 @@
+<!-- <link rel="icon" href="../static/logo.png" /> -->
+<!-- 
+<!doctype html>
+<title>Python Flask Image Upload and Display Example</title>
+
+<h2>Select an image to upload and display</h2>
+<p>
+    {% with messages = get_flashed_messages() %} {% if messages %}
+    <ul>
+        {% for message in messages %}
+        <li>{{ message }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %} {% endwith %}
+</p>
+
+{% if filename %}
+<div>
+    <img src="{{ url_for('display_image', filename=filename) }}">
+</div>
+{% endif %}
+<form method="post" action="/classify" enctype="multipart/form-data">
+    <dl>
+        <p>
+            <input type="file" name="file" autocomplete="off" required>
+        </p>
+    </dl>
+    <p>
+        <input type="submit" value="Submit">
+    </p>
+</form> -->
+
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://kit.fontawesome.com/a658a7b479.js" crossorigin="anonymous"></script>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+    <title>Yoga Pose Classification</title>
+    <link rel="icon" href="../static/logo.png" />
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            user-select: none;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+        
+        .grid-container {
+            display: grid;
+            background: #1b1b1b;
+            grid-template-columns: auto auto auto;
+            justify-content: space-evenly;
+        }
+        
+        body {
+            background: #f2f2f2;
+        }
+        
+        a {
+            color: #fff;
+            text-decoration: none;
+        }
+        
+        @media all and (max-width: 968px) {
+            .icon {
+                display: block;
+                color: white;
+                position: absolute;
+                top: 0;
+                right: 40px;
+                line-height: 70px;
+                cursor: pointer;
+                font-size: 25px;
+            }
+            span.cancel:before {
+                content: "\f00d";
+            }
+        }
+        
+        .btn-gold {
+            background-color: orange;
+            font-weight: 600;
+            /* background-color: #ff4d00; */
+            border: none;
+            color: #fff;
+            padding: 5px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 4%;
+            margin-bottom: 5%;
+        }
+        
+        .btn-danger {
+            background-color: #fe4a49;
+            font-weight: 600;
+            /* background-color: #ff4d00; */
+            border: none;
+            color: #fff;
+            padding: 5px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 4%;
+            margin-bottom: 5%;
+        }
+        
+        body {
+            background-color: #4c4177;
+            background-image: linear-gradient(315deg, #4c4177 0%, #2a5470 74%);
+        }
+        
+        .img-fluid {
+            max-width: 88.5%;
+            margin: 0 10%;
+        }
+        
+        h1 {
+            color: white;
+            text-align: center;
+        }
+        
+        .predict-btn {
+            margin-left: 10%;
+        }
+        
+        .choose-img-btn {
+            margin-left: 5%;
+        }
+        
+        .img-responsive {
+            margin: 0 5% 5% 5%;
+            max-width: 90%;
+        }
+        
+        .predicted-text {
+            margin-left: 7%;
+            color: white;
+            font-size: larger;
+            margin-bottom: 3%;
+        }
+        
+        .predicted-text span {
+            font-weight: bolder;
+        }
+        
+        .bold {
+            font-weight: 500;
+        }
+    </style>
+</head>
+
+<body>
+    <br>
+
+    <h1 class="container"><i class="fas fa-dove"></i> Yoga Pose Classification!!</h1>
+    <div class="container mt-4">
+        <form method="post" action="/classify" enctype="multipart/form-data">
+            <input type="file" name="file" class="btn btn-danger bold predict-btn" autocomplete="off" required>
+            <button type="submit" class="btn btn-gold bold predict-btn">Upload Image</button>
+        </form>
+
+        <!-- <form method="post" action="/classify/predict" enctype="multipart/form-data">
+            <button type="submit" class="btn btn-gold bold predict-btn">Predict Result</button>
+        </form> -->
+
+        {% if pose_name %}
+        <label class="predicted-text bold">  <span >Predicted Class : </span>{{pose_name}}</label>
+        <label class="predicted-text bold"> <span>Accuracy : </span>  {{pose_accuracy}}%</label> {% endif %}
+        <div class="row">
+            <div class="col-md-6">
+                {% if filename %}
+                <div>
+                    <img src="{{ url_for('display_image', filename=filename) }}" class="img-responsive">
+                </div>
+                {% else %}
+                <img src="../static/yp.jpeg" class="img-responsive"> {% endif %}
+
+            </div>
+            <div class="col-md-6"><img src="../static/yogaIMG_1.jpg" class="img-fluid">
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
