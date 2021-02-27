@@ -6,10 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="../static/icon.png">
-    <link rel="stylesheet" href="../static/css/classify.css">
-    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs/dist/tf.min.js">
-    </script>
-
+    <link rel="stylesheet" href="../static/css/webcam_classification.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs/dist/tf.min.js"></script>
     <title>Real Time Classification</title>
 
     <style>
@@ -68,7 +66,7 @@
     </style>
 </head>
 
-<body>
+<body onload="loadmodel()">
     <div class="main">
         <div class="title">
             <h3>Yoga Pose Classifier</h3>
@@ -83,11 +81,13 @@
         </div>
     </section>
 
+
     <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs/dist/tf.min.js" type="text/javascript"></script>
     <!-- Load the coco-ssd model to use to recognize things in images -->
     <!-- <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/coco-ssd"></script> -->
 
-    <script src="../static/js/webcam.js"></script>
+
+    <script src="../static/js/webcam_classification.js"></script>
 </body>
 
 </html>
