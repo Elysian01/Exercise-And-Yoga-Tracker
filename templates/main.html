@@ -12,24 +12,49 @@
     integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
     crossorigin="anonymous"></script>
   <style>
+    :root {
+      --primary-color: #52F2B8;
+      --secondary-color: rgba(65, 132, 237, 255);
+      --red: #e40046;
+      --purple: #7579e7;
+      --green: #00bdaa;
+      --dark: #26395d;
+    }
 
+    .flex-parent {
+      display: flex;
+    }
+
+    .jc-center {
+      justify-content: center;
+    }
+
+    button.margin-right {
+      margin-right: 20px;
+    }
+
+    .image-icon {
+      max-width: 50%;
+      margin-left: 25%;
+      margin-right: 25%;
+
+
+    }
+
+    body {
+      background-color: var(--secondary-color);
+    }
   </style>
 </head>
 
-<body>
+<body onload="loadmodel()">
   <nav class="navbar navbar-expand-lg navbar-light ">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">
         <img src="../static/imgs/home.png">
       </a>
 
-      <section id="demos" class="invisible">
 
-        <div id="liveView" class="camView">
-          <button id="webcamButton">Enable Webcam</button>
-          <video id="webcam" autoplay width="640" height="480"></video>
-        </div>
-      </section>
 
       <div class=" navbar-collapse" id="navbarSupportedContent">
         <!-- <ul class=" me-auto mb-2 mb-lg-0">
@@ -58,25 +83,79 @@
           </li>
         </ul> -->
 
-        <ul class=" navbar-nav d-flex mx-auto">
+        <!-- <ul class=" navbar-nav d-flex mx-auto">
           <li>
             <h2 class="nav-item" style=" color:#F05A39 ">YOGA POSE CLASSIFICATION</h2>
+          </li>
+        </ul> -->
+        <ul class="nav navbar-nav navbar-center  d-flex mx-auto">
+
+          <li>
+            <h2 class="text-center nav" style=" color:#F05A39 ">YOGA POSE CLASSIFICATION</h2>
           </li>
         </ul>
 
       </div>
-      <!-- <div class="  d-flex mx-auto  ">
-        <h2 class="" style=" color:#F05A39 ">YOGA POSE CLASSIFICATION</h2>
-      </div> -->
-      <!-- <h2 class="text-center" style="position: relative;right:50%;">YOGA POSE CLASSIFICATION</h2> -->
+
 
     </div>
 
   </nav>
-  <div class="d-flex justify-content-evenly">
+
+  <!-- <div class="d-flex justify-content-evenly">
     <div><button type="button" class="btn btn-warning">Warning</button></div>
     <div><button type="button" class="btn btn-warning">Warning</button></div>
     <video autoplay="" playsinline="" muted="" id="webcam" class="cam" data-vscid="x8ufjp167"></video>
+  </div> -->
+  <div class="row justify-content-around">
+    <div class="col-12 col-lg-6 col-xl-6 col-sm-12 col-md-12">
+      <h4 class="text-center">Switch on the camera and<br> switch off all negativity!</h4>
+      <br>
+      <div class="collapse" id="collapseExample">
+
+        <div class="p-4 flex-parent jc-center">
+          <section id="demos" class="invisible">
+
+            <div id="liveView" class="camView">
+              <!-- <button id="webcamButton">Enable Webcam</button> -->
+              <video id="webcam" autoplay width="640" height="380"></video>
+            </div>
+          </section>
+        </div>
+      </div>
+      <div class="flex-parent jc-center">
+        <br>
+
+        <button id="webcamButton" class="btn btn-primary" type="button" data-bs-toggle="collapse"
+          data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+          ENABLE CAM
+        </button>
+
+      </div>
+      <br>
+      <div class="flex-parent jc-center">
+
+        <label class="btn btn-large btn-outline-primary" for="btn-check-outlined">PREDICTED POSE -<div id="prediction">
+            tree
+          </div> </label><br>
+      </div>
+    </div>
+    <div class="col-12 col-lg-6 col-xl-6 col-sm-12 col-md-12">
+      <div class="flex-parent jc-center">
+        <label class="btn btn-outline-primary" for="btn-check-outlined">TIME 00:00</label><br>
+      </div>
+      <div class="flex-parent jc-center">
+        <img src="../static/imgs/yoga_illustration.jpg" class="img-fluid" alt="...">
+      </div>
+      <div class="card text-white flex-parent jc-center bg-danger mb-3 image-icon">
+        <div class="card-header">Header</div>
+        <div class="card-body">
+          <h5 class="card-title">Danger card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+            content.</p>
+        </div>
+      </div>
+    </div>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs/dist/tf.min.js" type="text/javascript"></script>
   <script src="../static/js/webcam_classification.js"></script>
