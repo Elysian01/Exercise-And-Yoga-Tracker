@@ -22,7 +22,6 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="icon" href="./static/icon.png">
     <link rel="stylesheet" href="./static/css/styles.css">
-    <script src="./static/js/script.js"></script>
     <title>Yoga Pose Classification</title>
 </head>
 
@@ -33,24 +32,18 @@
 
         <nav class="navbar navbar-expand-lg navbar-light ">
             <div class="container">
-                <a class="navbar-brand" href="#hero"><i class="fas fa-atom"></i> Yoga <span>Tracker</span> </a>
-
+                <a class="navbar-brand" href="#hero"><i class="fas fa-dove"></i> Yoga <span>Tracker</span> </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse"
                     data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                     aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span>
                 </button>
-                <button class="navbar-toggler" type="button" data-toggle="collapse"
-                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                    aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span>
-                </button>
-
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item">
-                            <a class="nav-link text-white hover" href="#features">Features</a>
+                            <a class="nav-link hover" style="color: #52F2B8;" href="#features">Features</a>
                         </li>
                         <li class="nav-item active">
-                            <a class="nav-link text-white font-weight-bold hover" href="#get-started">Get Started</a>
+                            <a class="nav-link hover nav-active" href="#get-started">Get Started</a>
                         </li>
 
                         <!-- <li class="nav-item">
@@ -60,12 +53,14 @@
                             <a class="nav-link text-white hover" target="_blank"
                                 href="https://github.com/Elysian01/Exercise-And-Yoga-Tracker">Repo</a>
                         <li class="nav-item">
-                            <a class="nav-link text-white hover" href="#mobile-application">Mobile Application</a>
+                            <a class="nav-link font-weight-bold hover" style="color: #52F2B8;"
+                                href="#mobile-application">Mobile Application</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white hover" target="_blank"
-                                href="https://github.com/Elysian01/Exercise-And-Yoga-Tracker">Repo</a>
-
+                            <a class="nav-link hover" target="_blank" style="color: #52F2B8;"
+                                href="https://github.com/Elysian01/Exercise-And-Yoga-Tracker">
+                                <u>Repo</u>
+                            </a>
                         </li>
                     </ul>
                 </div>
@@ -77,42 +72,41 @@
         <div class="hero-content">
 
             <div class="hero-bot mobile">
-                <img src="./static/img/homepage-bot.png " alt="Bot Image ">
+                <img src="./static/imgs/yoga_illustration2.png " alt="Yoga Illustration Image ">
             </div>
 
             <div data-aos="fade-down-right" data-aos-duration="1000" class="hero-header">
-
-                <h1>Get your hands on our<br><span class="primary-color"> Ready-to-use UI Designs</span><br> for your
-                    Rasa bots!</h1>
-
+                <h1 class="dark-color cachy-line"><b>Relieve.<span style="color: #52F2B8;"> Rejuvenate.
+                        </span>Replenish. <br><span class="dark-color"></b> </h1>
                 <br />
-                <p>
-                    Looking for UI Designs for your rasa chatbot with alluring colours and responsive features? Look no
-                    further! Explore our available designs in different colour schemes and ensure smooth traversal
-                    across all devices. Don't like the available designs? Don't
-                <h1>Get your hands on our<br><span class="primary-color"> Ready-to-use UI Designs</span><br> for your
-                    Rasa bots!</h1>
 
-                <br />
                 <p>
-                    Looking for UI Designs for your rasa chatbot with alluring colours and responsive features? Look no
-                    further! Explore our available designs in different colour schemes and ensure smooth traversal
-                    across all devices. Don't like the available designs? Don't
+                    <b><span>Tired</span></b>, <b><span>stressed</span></b> and <b><span>unfit</span></b>? Want a break
+                    from the <b><span>rushed life</span></b>?, Don't worry, we got you!, At Yoga Tracker we want you to
+                    experience the tranquillity and
+                    serenity of yoga. Unwind with mindful yoga and treat your body and mind to relief and solace.
 
-                    you worry! Customize themes and colours according to your liking very quickly and easily.
+
+                </p>
+
+
+                <p>
+                    <span style="color:#184A8C">
+                        <strong>At Yoga Tracker,</strong><span> we classify the poses for you and track how long you can
+                            hold each yoga pose.</span>
+                    </span>
                 </p>
 
                 <br>
-                <h3><span class="primary-color cachy-line">Embed. Customize. Repeat.</span></h3>
 
                 <div class="btns">
-                    <a href="#get-started"><button class="btn-green">Get Started</button></a>
-                    <a href="#mobile-application"><button class="btn-green ">Mobile App</button></a>
+                    <a href="#get-started"><button class="btn-dark dark-active">Get Started</button></a>
+                    <a href="./static/Yoga_Tracker.apk" download=""><button class="btn-dark ">Download APK</button></a>
                 </div>
             </div>
 
             <div data-aos="fade-up-left" data-aos-duration="1000" class="hero-bot desktop ">
-                <img src="./static/img/homepage-bot.png " alt="Bot Image ">
+                <img src="./static/imgs/yoga_illustration2.png " alt="Yoga Illustration Image ">
             </div>
         </div>
         <br>
@@ -187,87 +181,15 @@
 
     <br><br>
 
-    <div id="get-started" class="dark-bg">
-        <br>
-        <h1 class="text-center text-white">Getting <span class="primary-color">Started</span></h1><br>
-        <br>
+    <div id="get-started">
 
-
-        <h3 data-aos="fade-right" data-aos-duration="500" class="text-white text-center">Copy-paste the stylesheet <span
-                class="primary-color ">&lt;link&gt;</span> into your <span class="primary-color ">&lt;head&gt;</span>
-            before all other stylesheets to load our CSS.</h3>
-        <h3 data-aos="fade-right" data-aos-duration="500" class="text-white text-center">Copy-paste the stylesheet <span
-                class="primary-color ">&lt;link&gt;</span> into your <span class="primary-color ">&lt;head&gt;</span>
-            before all other stylesheets to load our CSS.</h3>
-        <br>
-
-
-        <div class="row ">
-            <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 ">
-                <ul class="list-group list-group-left">
-                    <li data-aos="fade-right" data-aos-duration="500" class="list-group-item list-group-item-left ">
-                        <b class="arrow ">>></b> <span class="title ">createChatbot: </span>To initailize & set various
-                        aspects of chatbot
-                    </li>
-                    <li data-aos="fade-right" data-aos-duration="700" class="list-group-item list-group-item-left ">
-                        <b class="arrow ">>></b> <span class="title ">host: </span> The URL of hosted chatbot
-                    </li>
-                    <li data-aos="fade-right" data-aos-duration="850" class="list-group-item list-group-item-left ">
-                        <b class="arrow ">>></b> <span class="title ">botLogo: </span> Logo Of the Bot
-                    </li>
-                    <li data-aos="fade-right" data-aos-duration="1000" class="list-group-item list-group-item-left ">
-                        <b class="arrow ">>></b> <span class="title ">title: </span>The title which will appear on the
-                        header of chatbot
-                    </li>
-                    <b class="arrow ">>></b> <span class="title ">createChatbot: </span>To initailize & set various
-                    aspects of chatbot</li>
-                    <li data-aos="fade-right" data-aos-duration="700" class="list-group-item list-group-item-left ">
-                        <b class="arrow ">>></b> <span class="title ">host: </span> The URL of hosted chatbot
-                    </li>
-                    <li data-aos="fade-right" data-aos-duration="850" class="list-group-item list-group-item-left ">
-                        <b class="arrow ">>></b> <span class="title ">botLogo: </span> Logo Of the Bot
-                    </li>
-                    <li data-aos="fade-right" data-aos-duration="1000" class="list-group-item list-group-item-left ">
-                        <b class="arrow ">>></b> <span class="title ">title: </span>The title which will appear on the
-                        header of chatbot
-                    </li>
-                </ul>
-            </div>
-            <div class="col ">
-                <ul class="list-group list-group-right">
-                    <li data-aos="fade-left" data-aos-duration="600" class="list-group-item list-group-item-left ">
-
-                        <b class="arrow ">>></b> <span class="title ">welcomeMessage: </span>Starting Message shown to
-                        the user, can be any greeting or information
-                    </li>
-                    <li data-aos="fade-left" data-aos-duration="750" class="list-group-item list-group-item-left ">
-                        <b class="arrow ">>></b> <span class="title ">inactiveMsg: </span>When bot server is down or
-                        unreachable this message will be shown
-                    </li>
-                    <li data-aos="fade-left" data-aos-duration="900" class="list-group-item list-group-item-left ">
-                        <b class="arrow ">>></b> <span class="title ">theme: </span>Color of header, bot message and
-                        overall layout, there are two inbuilt theme for bot, blue and purple
-                    </li>
-
-                    <b class="arrow ">>></b> <span class="title ">welcomeMessage: </span>Starting Message shown to the
-                    user, can be any greeting or information</li>
-                    <li data-aos="fade-left" data-aos-duration="750" class="list-group-item list-group-item-left ">
-                        <b class="arrow ">>></b> <span class="title ">inactiveMsg: </span>When bot server is down or
-                        unreachable this message will be shown
-                    </li>
-                    <li data-aos="fade-left" data-aos-duration="900" class="list-group-item list-group-item-left ">
-                        <b class="arrow ">>></b> <span class="title ">theme: </span>Color of header, bot message and
-                        overall layout, there are two inbuilt theme for bot, blue and purple
-                    </li>
-
-                </ul>
-            </div>
-        </div>
-
-    </div>
     </div>
 
     <br>
+
+    <div id="mobile-application">
+
+    </div>
 
     <div class="p-2 bg-warning font-weight-bold text-dark text-center bottom-0">You can contact us via <a
             href="mailto:abhig0209@gmail.com " class="text-danger ">abhig0209@gmail.com</a></div>

@@ -10,7 +10,7 @@ H5_Models
 
 
 # Extension Files
-*.bin
+# *.bin
 .jovianrc
 .ipynb_checkpoints
 *.h5
