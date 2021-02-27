@@ -5,14 +5,47 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="./static/icon.png">
-    <link rel="stylesheet" href="./static/css/styles.css">
-    <script src="./static/js/script.js"></script>
-    <title>Yoga Pose Classification</title>
+    <link rel="icon" href="../static/icon.png">
+    <link rel="stylesheet" href="../static/css/classify.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs/dist/tf.min.js">
+    </script>
+
+    <title>Image Classification</title>
 </head>
 
 <body>
+    <div class="main">
+        <div class="title">
+            <h3>Yoga Pose Classifier</h3>
+        </div>
+    </div>
 
+
+    <div class="panel">
+        <input id="file-upload" class="hidden" type="file" accept="image/jpeg" />
+        <label for="file-upload" id="file-drag" class="upload-box">
+                <div id="upload-caption">Drop image here or click to select</div>
+                <img id="image-preview" class="hidden" style="max-height:400px;"/>
+            </label>
+    </div>
+
+    <div class="button_group">
+        <input type="button" value="Clear" class="button" onclick="clearImage();" />
+        <input type="button" value="Predict" class="button" onclick="predict();" />
+    </div>
+
+    <div id="image-box">
+        <img id="image-display" />
+        <svg id="loader" class="hidden" viewBox="0 0 32 32" width="32" height="32">
+                <circle id="spinner" cx="16" cy="16" r="14" fill="none"></circle>
+            </svg>
+    </div>
+
+    <div style="text-align: center;font-weight: 900;" id="pred-result2" class="hidden"></div>
+
+    <br><br>
+
+    <script src="../static/js/classifier.js"></script>
 </body>
 
 </html>
