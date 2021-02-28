@@ -29,15 +29,32 @@ const stopTimer = () => {
 const resetTimer = () => {
     console.log("reset timer");
     
-    if(sessionStorage.getItem('exerciseDuration')){
+    if(false){
         let val = sessionStorage.getItem('exerciseDuration');
+
         console.log(val.excercise + ' ' + val.duration);
     }else{
         let excerciseName = "dog";
-        sessionStorage.setItem('exerciseDuration', {
-            "excercise" : excerciseName,
-            "duration" : min + " : " + sec
+        
+        let arr;
+        let time = "0: 10";
+        arr.push({ excerciseName : time });
+        
+        for(let i = 0; i < arr.length; i++){
+            arr[i] = JSON.stringify(arr[i]);
+        }
+
+        arr = JSON.stringify(arr);
+
+        //save to session storage
+        sessionStorage.setItem('excerciseDuration', arr);
+        var y = sessionStorage.getItem('excerciseDuration');
+        y = JSON.parse(y);
+
+        y.forEach((item, index) => {
+            console.log(item);
         });
+
     }
 
     stopStatus = true;
