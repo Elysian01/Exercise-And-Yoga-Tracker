@@ -15,8 +15,12 @@ const predResult = document.getElementById("prediction");
 
 const prediction_threshold = 0.6;
 
-set1_labels = { 0: "Downward Dog", 1: "Tree", 2: "Warrior 1" }
-set2_labels = { 0: "Goddess", 1: "Mountain", 2: "Warrior 2" }
+const set1_labels = { 0: "Downward Dog", 1: "Tree", 2: "Warrior 1" }
+const set2_labels = { 0: "Goddess", 1: "Mountain", 2: "Warrior 2" }
+
+const set1_cautions = { 0: "", 1: "", 2: "" }
+const set2_cautions = { 0: "", 1: "", 2: "" }
+
 
 // Check if webcam access is supported.
 function getUserMediaSupported() {

@@ -74,6 +74,7 @@ async function predict() {
     console.log(pre_text + result)
 
     show(predResult)
+
     window.scrollBy(0, 300);
 
 }
