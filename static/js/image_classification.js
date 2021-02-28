@@ -1,6 +1,9 @@
 const yoga_set1_model_path = "../static/models/Yoga_Set1_Tfjs/model.json"
 const yoga_set2_model_path = "../static/models/Yoga_Set2_Tfjs/model.json"
 
+const set1_labels = { 0: "Downward Dog", 1: "Tree", 2: "Warrior 1" }
+const set2_labels = { 0: "Goddess", 1: "Mountain", 2: "Warrior 2" }
+
 // Drag and drop image handling
 var fileDrag = document.getElementById("file-drag");
 var fileSelect = document.getElementById("file-upload");
@@ -37,11 +40,7 @@ var predResult = document.getElementById("pred-result2");
 var loader = document.getElementById("loader");
 var model = undefined;
 
-async function initialize() {
-    model = await tf.loadLayersModel(yoga_set1_model_path);
-    if (model)
-        console.log("Model Loaded ...")
-}
+
 
 // Main button events
 async function predict() {
@@ -59,16 +58,16 @@ async function predict() {
 
     pre_text = "I think it's a "
     if (pred_index === 0) {
-        result = "Downward Dog pose"
+        result = labels[pred_index] + " Pose"
         predResult.innerHTML = pre_text + result;
         console.log()
 
     } else if (pred_index === 1) {
-        result = "Tree Pose"
+        result = labels[pred_index] + " Pose"
         predResult.innerHTML = pre_text + result;
 
     } else {
-        result = "Warrior 1 Pose"
+        result = labels[pred_index] + " Pose"
         predResult.innerHTML = pre_text + result;
     }
     console.log(pre_text + result)
@@ -136,7 +135,23 @@ function show(el) {
     el.classList.remove("hidden");
 }
 
+async function initialize() {
+    if (yoga_set === "1") {
+        labels = set1_labels
+        yoga_model_path = yoga_set1_model_path
+    } else if (yoga_set === "2") {
+        labels = set2_labels
+        yoga_model_path = yoga_set2_model_path
+    }
+    model = await tf.loadLayersModel(yoga_model_path);
+
+    if (model)
+        console.log("Model Loaded " + yoga_set + "...")
+
+}
+
 
 function loadmodel() {
-    initialize()
+    yoga_set = sessionStorage.getItem("yogaSet");
+    initialize(yoga_set)
 }

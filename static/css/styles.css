@@ -356,3 +356,8 @@ Getting Started Section
 .card .card-text span {
     color: #fff;
 }
+
+.githubdiv {
+    display: flex;
+    justify-content: center;
+}

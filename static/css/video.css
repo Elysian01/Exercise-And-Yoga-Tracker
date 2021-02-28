@@ -1,0 +1,43 @@
+:root {
+    --primary-color: #52F2B8;
+    --secondary-color: rgb(65, 132, 237);
+    --red: #e40046;
+    --purple: #7579e7;
+    --green: #00bdaa;
+    --dark: #26395d;
+}
+
+.navbar-brand img {
+    max-width: 50px;
+}
+
+.heading {
+    color: var(--secondary-color);
+}
+
+.heading span {
+    color: var(--dark);
+}
+
+#prediction {
+    text-transform: uppercase;
+}
+
+.flex-parent {
+    display: flex;
+}
+
+.jc-center {
+    justify-content: center;
+}
+
+
+/* button .margin-right {
+    margin-right: 20px;
+} */
+
+.image-icon {
+    max-width: 50%;
+    margin-left: 25%;
+    margin-right: 25%;
+}

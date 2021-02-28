@@ -39,7 +39,7 @@ if (getUserMediaSupported()) {
 
 // Enable the live webcam view and start classification.
 function enableCam(event) {
-    // Only continue if the COCO-SSD has finished loading.
+    // Only continue if the model has finished loading.
     if (!model) {
         return;
     }
@@ -109,23 +109,24 @@ async function predictWebcam() {
 
 }
 
-async function initialize(yoga_set = 1) {
-    if (yoga_set === 1) {
+async function initialize(yoga_set = "1") {
+    if (yoga_set === "1") {
         labels = set1_labels
         yoga_model_path = yoga_set1_model_path
-    } else {
+    } else if (yoga_set === "2") {
         labels = set2_labels
         yoga_model_path = yoga_set2_model_path
     }
     model = await tf.loadLayersModel(yoga_model_path);
 
     if (model)
-        console.log("Model Loaded ...")
+        console.log("Model Loaded " + yoga_set + "...")
 
 
 }
 demosSection.classList.remove('invisible');
 
 function loadmodel() {
-    initialize(yoga_set = 1)
+    yoga_set = sessionStorage.getItem("yogaSet");
+    initialize(yoga_set)
 }
