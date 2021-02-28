@@ -4,7 +4,6 @@ var stopStatus = false;
 
 var x;
 const startTimer = () => {
-    
     x = setInterval(function() {
         sec++;
         $('.timer').text(min + ' : ' + sec);
@@ -19,7 +18,6 @@ const startTimer = () => {
             startTimer();   
         }   
     }, 1000);
-
 }
 
 const stopTimer = () => {
@@ -28,3 +26,23 @@ const stopTimer = () => {
     clearInterval(x);
 }
 
+const resetTimer = () => {
+    console.log("reset timer");
+    
+    if(sessionStorage.getItem('exerciseDuration')){
+        let val = sessionStorage.getItem('exerciseDuration');
+        console.log(val.excercise + ' ' + val.duration);
+    }else{
+        let excerciseName = "dog";
+        sessionStorage.setItem('exerciseDuration', {
+            "excercise" : excerciseName,
+            "duration" : min + " : " + sec
+        });
+    }
+
+    stopStatus = true;
+    clearInterval(x);
+    sec = 0;
+    min = 0;
+    $('.timer').text(min + ' : ' + sec);
+}
