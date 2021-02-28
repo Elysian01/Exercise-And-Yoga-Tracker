@@ -7,8 +7,9 @@
     --dark: #26395d;
 }
 
-.navbar-brand img {
+.home-img img {
     max-width: 50px;
+    margin-left: 10px;
 }
 
 .heading {
@@ -17,6 +18,18 @@
 
 .heading span {
     color: var(--dark);
+}
+
+.header-container-flex {
+    display: grid;
+    grid-template-columns: 0% 100%;
+}
+
+@media only screen and (max-width: 600px) {
+    .header-container-flex {
+        grid-template-columns: 100%;
+        text-align: center;
+    }
 }
 
 #prediction {
