@@ -60,10 +60,12 @@
     margin: 10px;
     background-color: #d9ffb3;
     padding: 1rem;
+    border-radius: 1rem;
 }
 
 .dis-adv {
     margin: 10px;
     background-color: #ffc2b3;
     padding: 1rem;
+    border-radius: 1rem;
 }

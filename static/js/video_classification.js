@@ -25,7 +25,7 @@ const advDisAdv = {
     }
   }
 
-  console.log(advDisAdv);
+  console.log(pred_index + 'fdv');
   var pose = "tree";
   document.getElementById('pose').innerHTML = pose;
 
@@ -59,7 +59,7 @@ const advDisAdv = {
     }) 
     document.getElementById("disAdv").innerHTML = disAd;
 
-  }else if(pose === "mountain"){
+  } else if(pose === "mountain"){
     let advantages = advDisAdv.mountain.adv;
     var advs = "";
     advantages.forEach((item, index) => {
@@ -74,7 +74,7 @@ const advDisAdv = {
     }) 
     document.getElementById("disAdv").innerHTML = disAd;
 
-  }else if(pose === "warrior1"){
+  } else if(pose === "warrior1"){
     let advantages = advDisAdv.warrior1.adv;
     var advs = "";
     advantages.forEach((item, index) => {
@@ -89,7 +89,7 @@ const advDisAdv = {
     }) 
     document.getElementById("disAdv").innerHTML = disAd;
 
-  }else if(pose === "warrior2"){
+  } else if(pose === "warrior2"){
     let advantages = advDisAdv.warrior2.adv;
     var advs = "";
     advantages.forEach((item, index) => {
@@ -104,7 +104,7 @@ const advDisAdv = {
     }) 
     document.getElementById("disAdv").innerHTML = disAd;
 
-  }else if(pose === "goddess"){
+  } else if(pose === "goddess"){
     let advantages = advDisAdv.goddess.adv;
     var advs = "";
     advantages.forEach((item, index) => {
@@ -126,7 +126,6 @@ const advDisAdv = {
 var sec = 0;
 var min = 0;
 var stopStatus = false;
-console.log(pred_index);
 
 var x;
 const startTimer = () => {
@@ -170,7 +169,6 @@ const resetTimer = () => {
         sessionStorage.setItem('excerciseDuration', arr);
         var y = sessionStorage.getItem('excerciseDuration');
         y = JSON.parse(y);
-        console.log(y);
         y.forEach((item, index) => {
           y[index] = JSON.parse(item);
         });
@@ -178,9 +176,7 @@ const resetTimer = () => {
 
     } else {
       var y = sessionStorage.getItem('excerciseDuration');
-      console.log('sdv0');
       y = JSON.parse(y);
-      console.log(y);
       y.forEach((item, index) => {
         y[index] = JSON.parse(item);
       });
@@ -194,8 +190,7 @@ const resetTimer = () => {
 
       //save to session storage
       sessionStorage.setItem('excerciseDuration', y); 
-      location.reload();
-      
+      location.reload(); 
     }
 
     stopStatus = true;

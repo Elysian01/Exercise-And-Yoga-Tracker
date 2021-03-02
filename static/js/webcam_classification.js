@@ -135,14 +135,12 @@ function loadmodel() {
     if ('excerciseDuration' in sessionStorage) {
         var y = sessionStorage.getItem('excerciseDuration');
         y = JSON.parse(y);
-        console.log(y);
         y.forEach((item, index) => {
             y[index] = JSON.parse(item);
         });
 
         y.forEach((item, index) => {
             $(".table").find('tbody').append(`<tr><td>${Object.keys(item)}</td><td>${Object.values(item)}</td></tr>`);
-            console.log(item);
         });
     } 
 }
