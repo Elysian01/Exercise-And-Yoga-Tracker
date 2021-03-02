@@ -25,8 +25,24 @@ const advDisAdv = {
     }
   }
 
-  console.log(pred_index + 'fdv');
-  var pose = "tree";
+
+  const set1_labels_info = { 0: "dog", 1: "tree", 2: "warrior1" }
+  const set2_labels_info = { 0: "goddess", 1: "mountain", 2: "warrior2" }
+
+  var pose;
+
+  //variables coming from web_classification
+  pred_index = 1;
+  
+  // yoga_set = "1";
+
+  if (yoga_set === "1") {
+    pose = set1_labels_info[pred_index]
+  } else if (yoga_set === "2") {
+    pose = set2_labels_info[pred_index]
+  }
+
+
   document.getElementById('pose').innerHTML = pose;
 
   if(pose === "dog"){
