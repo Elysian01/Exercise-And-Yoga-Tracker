@@ -5,9 +5,6 @@
 
 <!DOCTYPE html>
 
-
-<!doctype html>
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -154,7 +151,7 @@
 
                     <div class="card-btns">
                         <a href="./templates/image.html"><button type="button" class="btn-green" id="set1-btn">Classify Image</button></a>
-                        <a href="./templates/main.html"><button type="button" class="btn-green" id="set1-btn">Real Time Classification</button></a>
+                        <a href="./templates/main.html"><button type="button" class="btn-green" id="set1-real-btn">Real Time Classification</button></a>
                     </div>
                 </div>
             </div>
@@ -167,7 +164,7 @@
 
                     <div class="card-btns">
                         <a href="./templates/image.html"><button type="button" class="btn-green" id="set2-btn">Classify Image</button></a>
-                        <a href="./templates/main.html"><button type="button" class="btn-green" id="set2-btn">Real Time Classification</button></a>
+                        <a href="./templates/main.html"><button type="button" class="btn-green" id="set2-real-btn">Real Time Classification</button></a>
                     </div>
                 </div>
             </div>
@@ -239,10 +236,19 @@
             sessionStorage.setItem("yogaSet", "1");
         });
 
+        document.getElementById("set1-real-btn").addEventListener("click", () => {
+            console.log("Set 1 Button");
+            sessionStorage.setItem("yogaSet", "1");
+        });
+
         document.getElementById("set2-btn").addEventListener("click", () => {
             console.log("Set 2 Button");
             sessionStorage.setItem("yogaSet", "2");
-        })
+        });
+        document.getElementById("set2-real-btn").addEventListener("click", () => {
+            console.log("Set 2 Button");
+            sessionStorage.setItem("yogaSet", "2");
+        });
     </script>
 
 
