@@ -129,4 +129,18 @@ demosSection.classList.remove('invisible');
 function loadmodel() {
     yoga_set = sessionStorage.getItem("yogaSet");
     initialize(yoga_set)
+
+
+    //load table data
+    if ('excerciseDuration' in sessionStorage) {
+        var y = sessionStorage.getItem('excerciseDuration');
+        y = JSON.parse(y);
+        y.forEach((item, index) => {
+            y[index] = JSON.parse(item);
+        });
+
+        y.forEach((item, index) => {
+            $(".table").find('tbody').append(`<tr><td>${Object.keys(item)}</td><td>${Object.values(item)}</td></tr>`);
+        });
+    } 
 }

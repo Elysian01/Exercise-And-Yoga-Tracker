@@ -58,8 +58,8 @@
                 <br>
 
                 <button id="webcamButton" class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-          ENABLE CAM
-        </button>
+                ENABLE CAM
+                </button>
 
             </div>
             <br>
@@ -76,20 +76,46 @@
         <div class="col-12 col-lg-6 col-xl-6 col-sm-12 col-md-12">
             <div class="flex-parent jc-center">
                 <!-- <label class="btn btn-outline-primary" for="btn-check-outlined">TIME 00:00</label><br> -->
-                <h3>TIME: <span>00:00</span></h3>
+                <h3>TIME: <span class="timer">00:00</span></h3>
                 <br>
             </div>
             <div class="flex-parent jc-center">
                 <img src="../static/imgs/yoga_illustration.jpg" class="img-fluid" alt="...">
             </div>
+        </div>
+    </div>
+    
+    <div>
+        <!-- <div class="timer">00</div> -->
+        <button class="btn btn-primary" onclick=startTimer()>Start</button>
+        <button class="btn btn-primary" onclick=stopTimer()>stop</button>
+        <button class="btn btn-primary" onclick=resetTimer()>reset</button>
+    </div>
+    <div class="row">
+        <div class="col">
+            <table class="table">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">Pose</th>
+                        <th scope="col">Duration</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+        <div class="col">
+            <div class="pose" id="pose"></div>
+            <div class="adv-disadv">
 
-            <div class="card text-white flex-parent jc-center bg-danger mb-3 image-icon">
-                <div class="card-header">Header</div>
-                <div class="card-body">
-                    <h5 class="card-title">Danger card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.
-                    </p>
+                Benifits
+                <div class="adv border border-success" id="adv">
                 </div>
+
+                Caution
+                <div class="dis-adv border border-danger" id="disAdv">
+                </div>
+
             </div>
         </div>
     </div>
