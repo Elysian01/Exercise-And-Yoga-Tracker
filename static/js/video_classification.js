@@ -41,35 +41,35 @@ if (yoga_set === "1") {
     pose = set2_labels_info[pred_index]
 }
 
-document.getElementById("gif").src = '../static/tutorials/'+pose+'.gif';
+document.getElementById("gif").src = '../static/tutorials/' + pose + '.gif';
 // document.getElementById('pose').innerHTML = pose;
 
 if (pose === "dog") {
     let advantages = advDisAdv.dog.adv;
     var advs = "";
     advantages.forEach((item, index) => {
-        advs += item + " " + "<br><br>";
+        advs += item + " " + "<br>";
     })
     document.getElementById("adv").innerHTML = advs;
 
     let disAdvantages = advDisAdv.dog.disAdv;
     var disAd = "";
     disAdvantages.forEach((item, index) => {
-        disAd += item + " " + "<br><br>";
+        disAd += item + " " + "<br>";
     })
     document.getElementById("disAdv").innerHTML = disAd;
 } else if (pose === "tree") {
     let advantages = advDisAdv.tree.adv;
     var advs = "";
     advantages.forEach((item, index) => {
-        advs += item + " " + "<br><br>";
+        advs += item + " " + "<br>";
     })
     document.getElementById("adv").innerHTML = advs;
 
     let disAdvantages = advDisAdv.tree.disAdv;
     var disAd = "";
     disAdvantages.forEach((item, index) => {
-        disAd += item + " " + "<br><br>";
+        disAd += item + " " + "<br>";
     })
     document.getElementById("disAdv").innerHTML = disAd;
 
@@ -77,14 +77,14 @@ if (pose === "dog") {
     let advantages = advDisAdv.mountain.adv;
     var advs = "";
     advantages.forEach((item, index) => {
-        advs += item + " " + "<br><br>";
+        advs += item + " " + "<br>";
     })
     document.getElementById("adv").innerHTML = advs;
 
     let disAdvantages = advDisAdv.mountain.disAdv;
     var disAd = "";
     disAdvantages.forEach((item, index) => {
-        disAd += item + " " + "<br><br>";
+        disAd += item + " " + "<br>";
     })
     document.getElementById("disAdv").innerHTML = disAd;
 
@@ -92,14 +92,14 @@ if (pose === "dog") {
     let advantages = advDisAdv.warrior1.adv;
     var advs = "";
     advantages.forEach((item, index) => {
-        advs += item + " " + "<br><br>";
+        advs += item + " " + "<br>";
     })
     document.getElementById("adv").innerHTML = advs;
 
     let disAdvantages = advDisAdv.warrior1.disAdv;
     var disAd = "";
     disAdvantages.forEach((item, index) => {
-        disAd += item + " " + "<br><br>";
+        disAd += item + " " + "<br>";
     })
     document.getElementById("disAdv").innerHTML = disAd;
 
@@ -107,14 +107,14 @@ if (pose === "dog") {
     let advantages = advDisAdv.warrior2.adv;
     var advs = "";
     advantages.forEach((item, index) => {
-        advs += item + " " + "<br><br>";
+        advs += item + " " + "<br>";
     })
     document.getElementById("adv").innerHTML = advs;
 
     let disAdvantages = advDisAdv.warrior2.disAdv;
     var disAd = "";
     disAdvantages.forEach((item, index) => {
-        disAd += item + " " + "<br><br>";
+        disAd += item + " " + "<br>";
     })
     document.getElementById("disAdv").innerHTML = disAd;
 
@@ -122,14 +122,14 @@ if (pose === "dog") {
     let advantages = advDisAdv.goddess.adv;
     var advs = "";
     advantages.forEach((item, index) => {
-        advs += item + " " + "<br><br>";
+        advs += item + " " + "<br>";
     })
     document.getElementById("adv").innerHTML = advs;
 
     let disAdvantages = advDisAdv.goddess.disAdv;
     var disAd = "";
     disAdvantages.forEach((item, index) => {
-        disAd += item + " " + "<br><br>";
+        disAd += item + " " + "<br>";
     })
     document.getElementById("disAdv").innerHTML = disAd;
 
