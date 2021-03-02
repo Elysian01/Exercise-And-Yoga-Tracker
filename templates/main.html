@@ -80,19 +80,18 @@
                 <br>
             </div>
             <div class="flex-parent jc-center">
-                <img src="../static/imgs/yoga_illustration.jpg" class="img-fluid" alt="...">
+                <img class="img-fluid" id="gif" width="80%" >
             </div>
         </div>
     </div>
-    
+
     <div>
-        <!-- <div class="timer">00</div> -->
         <button class="btn btn-primary" onclick=startTimer()>Start</button>
         <button class="btn btn-primary" onclick=stopTimer()>stop</button>
         <button class="btn btn-primary" onclick=resetTimer()>reset</button>
     </div>
-    <div class="row">
-        <div class="col">
+    <div class="row ">
+        <div class="col col-sm-12 col-lg-6 col-xl-6 flex-parent jc-center">
             <table class="table">
                 <thead class="thead-dark">
                     <tr>
@@ -104,15 +103,15 @@
                 </tbody>
             </table>
         </div>
-        <div class="col">
-            <div class="pose" id="pose"></div>
+        <div class="col col-sm-12 col-lg-6 col-xl-6 flex-parent jc-center">
+            <!-- <div class="pose" id="pose"></div> -->
             <div class="adv-disadv">
 
-                Benifits
+                <b>Benifits</b>
                 <div class="adv border border-success" id="adv">
                 </div>
 
-                Caution
+                <b>Caution</b>
                 <div class="dis-adv border border-danger" id="disAdv">
                 </div>
 

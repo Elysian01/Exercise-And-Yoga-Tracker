@@ -32,7 +32,7 @@ const set2_labels_info = { 0: "goddess", 1: "mountain", 2: "warrior2" }
 var pose;
 
 //variables coming from web_classification
-pred_index = 1;
+pred_index = 2;
 yoga_set = sessionStorage.getItem("yogaSet");
 
 if (yoga_set === "1") {
@@ -41,8 +41,8 @@ if (yoga_set === "1") {
     pose = set2_labels_info[pred_index]
 }
 
-
-document.getElementById('pose').innerHTML = pose;
+document.getElementById("gif").src = '../static/tutorials/'+pose+'.gif';
+// document.getElementById('pose').innerHTML = pose;
 
 if (pose === "dog") {
     let advantages = advDisAdv.dog.adv;
