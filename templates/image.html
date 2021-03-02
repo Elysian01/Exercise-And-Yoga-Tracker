@@ -11,18 +11,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="../static/icon.png">
     <link rel="stylesheet" href="../static/css/image_classification.css">
-    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs/dist/tf.min.js">
-    </script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs/dist/tf.min.js"></script>
+    <script src="https://kit.fontawesome.com/a658a7b479.js" crossorigin="anonymous"></script>
 
+    <!-- Loading Screen -->
+    <link rel="stylesheet" href="../static/css/screen_loader.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <title>Image Classification</title>
 </head>
 
 <body onload="loadmodel()">
-    <div class="main">
-        <div class="title">
-            <h3>Yoga Pose Classifier</h3>
-        </div>
+
+    <div class="loader-wrapper">
+        <span class="loader"><span class="loader-inner"></span>
     </div>
+
+
+    <div class="container-flex">
+        <a class="navbar-brand" href="../index.html">
+            <img src="../static/imgs/home.png">
+
+        </a>
+        <h1 class="text-center heading">
+            <i class="fas fa-dove"> </i>&nbsp; Yoga Pose <span> &nbsp;Classification </span>
+        </h1>
+    </div>
+    <br>
 
 
     <div class="panel">
@@ -50,6 +64,13 @@
     <br><br>
 
     <script src="../static/js/image_classification.js"></script>
+
+    <script>
+        // For loading Screen
+        $(window).on("load", function() {
+            $(".loader-wrapper").fadeOut("slow");
+        });
+    </script>
 </body>
 
 </html>

@@ -15,8 +15,12 @@ const predResult = document.getElementById("prediction");
 
 const prediction_threshold = 0.6;
 
-set1_labels = { 0: "Downward Dog", 1: "Tree", 2: "Warrior 1" }
-set2_labels = { 0: "Goddess", 1: "Mountain", 2: "Warrior 2" }
+const set1_labels = { 0: "Downward Dog", 1: "Tree", 2: "Warrior 1" }
+const set2_labels = { 0: "Goddess", 1: "Mountain", 2: "Warrior 2" }
+
+const set1_cautions = { 0: "", 1: "", 2: "" }
+const set2_cautions = { 0: "", 1: "", 2: "" }
+
 
 // Check if webcam access is supported.
 function getUserMediaSupported() {
@@ -35,7 +39,7 @@ if (getUserMediaSupported()) {
 
 // Enable the live webcam view and start classification.
 function enableCam(event) {
-    // Only continue if the COCO-SSD has finished loading.
+    // Only continue if the model has finished loading.
     if (!model) {
         return;
     }
@@ -105,23 +109,40 @@ async function predictWebcam() {
 
 }
 
-async function initialize(yoga_set = 1) {
-    if (yoga_set === 1) {
+async function initialize(yoga_set = "1") {
+    if (yoga_set === "1") {
         labels = set1_labels
         yoga_model_path = yoga_set1_model_path
-    } else {
+    } else if (yoga_set === "2") {
         labels = set2_labels
         yoga_model_path = yoga_set2_model_path
     }
     model = await tf.loadLayersModel(yoga_model_path);
 
     if (model)
-        console.log("Model Loaded ...")
+        console.log("Model Loaded " + yoga_set + "...")
 
 
 }
 demosSection.classList.remove('invisible');
 
 function loadmodel() {
-    initialize(yoga_set = 1)
+    yoga_set = sessionStorage.getItem("yogaSet");
+    initialize(yoga_set)
+
+
+    //load table data
+    if ('excerciseDuration' in sessionStorage) {
+        var y = sessionStorage.getItem('excerciseDuration');
+        y = JSON.parse(y);
+        console.log(y);
+        y.forEach((item, index) => {
+            y[index] = JSON.parse(item);
+        });
+
+        y.forEach((item, index) => {
+            $(".table").find('tbody').append(`<tr><td>${Object.keys(item)}</td><td>${Object.values(item)}</td></tr>`);
+            console.log(item);
+        });
+    } 
 }

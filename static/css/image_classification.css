@@ -1,8 +1,40 @@
 body {
     font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
     -webkit-font-smoothing: antialiased;
-    background-color: #f8f8f8;
     scroll-behavior: smooth;
+}
+
+:root {
+    --primary-color: #52F2B8;
+    --secondary-color: rgb(65, 132, 237);
+    --red: #e40046;
+    --purple: #7579e7;
+    --green: #00bdaa;
+    --dark: #26395d;
+}
+
+.navbar-brand img {
+    max-width: 50px;
+}
+
+.heading {
+    color: var(--secondary-color);
+}
+
+.heading span {
+    color: var(--dark);
+}
+
+.container-flex {
+    display: grid;
+    grid-template-columns: 35% 65%;
+}
+
+@media only screen and (max-width: 600px) {
+    .container-flex {
+        grid-template-columns: 100%;
+        text-align: center;
+    }
 }
 
 

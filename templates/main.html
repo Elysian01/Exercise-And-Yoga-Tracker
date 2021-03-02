@@ -2,163 +2,140 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Main</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
-    crossorigin="anonymous"></script>
-  <style>
-    :root {
-      --primary-color: #52F2B8;
-      --secondary-color: rgba(65, 132, 237, 255);
-      --red: #e40046;
-      --purple: #7579e7;
-      --green: #00bdaa;
-      --dark: #26395d;
-    }
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../static/icon.png">
+    <link rel="stylesheet" href="../static/css/video.css">
+    <script src="https://kit.fontawesome.com/a658a7b479.js" crossorigin="anonymous"></script>
 
-    .flex-parent {
-      display: flex;
-    }
+    <!-- Loading Screen -->
+    <link rel="stylesheet" href="../static/css/screen_loader.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-    .jc-center {
-      justify-content: center;
-    }
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
 
-    button.margin-right {
-      margin-right: 20px;
-    }
+    <title>Real Time Classification</title>
 
-    .image-icon {
-      max-width: 50%;
-      margin-left: 25%;
-      margin-right: 25%;
-
-
-    }
-
-    body {
-      background-color: var(--secondary-color);
-    }
-  </style>
 </head>
 
 <body onload="loadmodel()">
-  <nav class="navbar navbar-expand-lg navbar-light ">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">
-        <img src="../static/imgs/home.png">
-      </a>
 
-
-
-      <div class=" navbar-collapse" id="navbarSupportedContent">
-        <!-- <ul class=" me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
-              aria-expanded="false">
-              Dropdown
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li>
-                <hr class="dropdown-divider">
-              </li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
-            </ul>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-          </li>
-        </ul> -->
-
-        <!-- <ul class=" navbar-nav d-flex mx-auto">
-          <li>
-            <h2 class="nav-item" style=" color:#F05A39 ">YOGA POSE CLASSIFICATION</h2>
-          </li>
-        </ul> -->
-        <ul class="nav navbar-nav navbar-center  d-flex mx-auto">
-
-          <li>
-            <h2 class="text-center nav" style=" color:#F05A39 ">YOGA POSE CLASSIFICATION</h2>
-          </li>
-        </ul>
-
-      </div>
-
-
+    <div class="loader-wrapper">
+        <span class="loader"><span class="loader-inner"></span></span>
     </div>
 
-  </nav>
+    <br>
+    <div class="header-container-flex">
+        <a class="home-img" href="../index.html">
+            <img src="../static/imgs/home.png">
+        </a>
+        <h2 class="text-center heading">
+            <i class="fas fa-dove"> </i>&nbsp; Yoga Pose<span>&nbsp;Classification </span>
+        </h2>
+    </div>
+    <br><br>
 
-  <!-- <div class="d-flex justify-content-evenly">
-    <div><button type="button" class="btn btn-warning">Warning</button></div>
-    <div><button type="button" class="btn btn-warning">Warning</button></div>
-    <video autoplay="" playsinline="" muted="" id="webcam" class="cam" data-vscid="x8ufjp167"></video>
-  </div> -->
-  <div class="row justify-content-around">
-    <div class="col-12 col-lg-6 col-xl-6 col-sm-12 col-md-12">
-      <h4 class="text-center">Switch on the camera and<br> switch off all negativity!</h4>
-      <br>
-      <div class="collapse" id="collapseExample">
 
-        <div class="p-4 flex-parent jc-center">
-          <section id="demos" class="invisible">
+    <div class="row justify-content-around">
+        <div class="col-12 col-lg-6 col-xl-6 col-sm-12 col-md-12">
+            <h4 class="text-center">Switch on the camera and<br> switch off all negativity!</h4>
+            <br>
+            <div class="collapse" id="collapseExample">
 
-            <div id="liveView" class="camView">
-              <!-- <button id="webcamButton">Enable Webcam</button> -->
-              <video id="webcam" autoplay width="640" height="380"></video>
+                <div class="p-4 flex-parent jc-center">
+                    <section id="demos" class="invisible">
+
+                        <div id="liveView" class="camView">
+                            <!-- <button id="webcamButton">Enable Webcam</button> -->
+                            <video id="webcam" autoplay width="640" height="380"></video>
+                        </div>
+                    </section>
+                </div>
             </div>
-          </section>
+            <div class="flex-parent jc-center">
+                <br>
+
+                <button id="webcamButton" class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                ENABLE CAM
+                </button>
+
+            </div>
+            <br>
+            <div class="flex-parent jc-center">
+
+                <h4>PREDICTED POSE:
+                    <span id="prediction">
+                    Tree
+                </span> </h4>
+
+                <br>
+            </div>
         </div>
-      </div>
-      <div class="flex-parent jc-center">
-        <br>
+        <div class="col-12 col-lg-6 col-xl-6 col-sm-12 col-md-12">
+            <div class="flex-parent jc-center">
+                <!-- <label class="btn btn-outline-primary" for="btn-check-outlined">TIME 00:00</label><br> -->
+                <h3>TIME: <span class="timer">00:00</span></h3>
+                <br>
+            </div>
+            <div class="flex-parent jc-center">
+                <img src="../static/imgs/yoga_illustration.jpg" class="img-fluid" alt="...">
+            </div>
 
-        <button id="webcamButton" class="btn btn-primary" type="button" data-bs-toggle="collapse"
-          data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-          ENABLE CAM
-        </button>
-
-      </div>
-      <br>
-      <div class="flex-parent jc-center">
-
-        <label class="btn btn-large btn-outline-primary" for="btn-check-outlined">PREDICTED POSE -<div id="prediction">
-            tree
-          </div> </label><br>
-      </div>
-    </div>
-    <div class="col-12 col-lg-6 col-xl-6 col-sm-12 col-md-12">
-      <div class="flex-parent jc-center">
-        <label class="btn btn-outline-primary" for="btn-check-outlined">TIME 00:00</label><br>
-      </div>
-      <div class="flex-parent jc-center">
-        <img src="../static/imgs/yoga_illustration.jpg" class="img-fluid" alt="...">
-      </div>
-      <div class="card text-white flex-parent jc-center bg-danger mb-3 image-icon">
-        <div class="card-header">Header</div>
-        <div class="card-body">
-          <h5 class="card-title">Danger card title</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-            content.</p>
+            <div class="card text-white flex-parent jc-center bg-danger mb-3 image-icon">
+                <div class="card-header">Header</div>
+                <div class="card-body">
+                    <h5 class="card-title">Danger card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.
+                    </p>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
-  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs/dist/tf.min.js" type="text/javascript"></script>
-  <script src="../static/js/webcam_classification.js"></script>
+    <div>
+        <!-- <div class="timer">00</div> -->
+        <button class="btn btn-primary" onclick=startTimer()>Start</button>
+        <button class="btn btn-primary" onclick=stopTimer()>stop</button>
+        <button class="btn btn-primary" onclick=resetTimer()>reset</button>
+    </div>
+    <div class="row">
+        <div class="col">
+            <table class="table">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">Pose</th>
+                        <th scope="col">Duration</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+        <div class="col">
+            <div class="pose" id="pose"></div>
+            <div class="adv-disadv">
+
+                Benifits
+                <div class="adv border border-success" id="adv">
+                </div>
+
+                Caution
+                <div class="dis-adv border border-danger" id="disAdv">
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs/dist/tf.min.js" type="text/javascript"></script>
+    <script src="../static/js/webcam_classification.js"></script>
+    <script src="../static/js/video_classification.js"></script>
+    <script>
+        // For loading Screen
+        $(window).on("load", function() {
+            $(".loader-wrapper").fadeOut("slow");
+        });
+    </script>
 </body>
 
 
