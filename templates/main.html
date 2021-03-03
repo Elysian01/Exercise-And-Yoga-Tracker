@@ -85,13 +85,24 @@
         </div>
     </div>
 
-    <div>
+    <!-- <div>
         <button class="btn btn-primary" onclick=startTimer()>Start</button>
         <button class="btn btn-primary" onclick=stopTimer()>stop</button>
         <button class="btn btn-primary" onclick=resetTimer()>reset</button>
-    </div>
-    <div class="row ">
-        <div class="col col-sm-12 col-lg-6 col-xl-6 flex-parent jc-center">
+    </div> -->
+    <div class="row jc-center">
+        <div class=" col-sm-12 col-md-12 col-lg-6 col-xl-6">
+            <div class="adv-disadv">
+                <b>Caution</b>
+                <div class="dis-adv border border-danger" id="disAdv">
+                </div>
+                <b>Benifits</b>
+                <div class="adv border border-success" id="adv">
+                </div>
+            </div>
+        </div>
+        <div class=" col-sm-12 col-md-12 col-lg-6 col-xl-6">
+            <!-- <div class="pose" id="pose"></div> -->
             <table class="table">
                 <thead class="thead-dark">
                     <tr>
@@ -102,20 +113,7 @@
                 <tbody>
                 </tbody>
             </table>
-        </div>
-        <div class="col col-sm-12 col-lg-6 col-xl-6 flex-parent jc-center">
-            <!-- <div class="pose" id="pose"></div> -->
-            <div class="adv-disadv">
-
-                <b>Benifits</b>
-                <div class="adv border border-success" id="adv">
-                </div>
-
-                <b>Caution</b>
-                <div class="dis-adv border border-danger" id="disAdv">
-                </div>
-
-            </div>
+            
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs/dist/tf.min.js" type="text/javascript"></script>
@@ -130,4 +128,9 @@
 </body>
 
 
+
 </html>
+
+<!-- camera ke niche caution 
+image ke table
+image ke niche Benifits -->

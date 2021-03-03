@@ -167,12 +167,14 @@ const stopTimer = () => {
 
 const resetTimer = () => {
     console.log("reset timer");
-
+    let posex = pose;
     let time = min + " : " + sec;
     if (sessionStorage.getItem("excerciseDuration") === null) {
 
         var arr = new Array();
-        arr[0] = { "excerciseName": time };
+        let s = {};
+        s[posex] = time;
+        arr[0] = s;
         for (let i = 0; i < arr.length; i++) {
             arr[i] = JSON.stringify(arr[i]);
         }
@@ -194,8 +196,11 @@ const resetTimer = () => {
         y.forEach((item, index) => {
             y[index] = JSON.parse(item);
         });
+        console.log(posex);
 
-        y.push({ "excerciseName": time });
+        let s = {};
+        s[posex] = time;
+        y.push(s);
 
         for (let i = 0; i < y.length; i++) {
             y[i] = JSON.stringify(y[i]);
