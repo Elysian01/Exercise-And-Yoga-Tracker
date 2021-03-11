@@ -31,9 +31,9 @@ const changeData = (pred_index) => {
             disAdv: [" Be careful if there is an existing wrist or shoulder injury", "high blood pressure or headache should modify with support for the head (bolster or blankets)", "late-term pregnancy"]
         }
     }
-    
+
     const set1_labels_info = { 0: "dog", 1: "tree", 2: "warrior1" }
-    const set2_labels_info = { 0: "goddess", 1: "mountain", 2: "warrior2" }    
+    const set2_labels_info = { 0: "goddess", 1: "mountain", 2: "warrior2" }
 
     yoga_set = sessionStorage.getItem("yogaSet");
 
@@ -190,7 +190,7 @@ const resetTimer = () => {
         y.forEach((item, index) => {
             y[index] = JSON.parse(item);
         });
-        location.reload();
+        // location.reload();
 
     } else {
         var y = sessionStorage.getItem('excerciseDuration');
@@ -211,7 +211,7 @@ const resetTimer = () => {
 
         //save to session storage
         sessionStorage.setItem('excerciseDuration', y);
-        location.reload();
+        // location.reload();
     }
     stopStatus = true;
     clearInterval(x);

@@ -82,8 +82,10 @@ function getPriorityInArray(latest_prediction_array, actual_predicted_value) {
     found_most_occuring_predicted_value = majorityElement(sub_array);
     if (actual_predicted_value !== found_most_occuring_predicted_value) {
         predResult.innerHTML = labels[pred_index];
+        changeData(pred_index);
     }
 }
+
 
 async function predictWebcam() {
 
@@ -142,5 +144,5 @@ function loadmodel() {
         y.forEach((item, index) => {
             $(".table").find('tbody').append(`<tr><td>${Object.keys(item)}</td><td>${Object.values(item)}</td></tr>`);
         });
-    } 
+    }
 }
