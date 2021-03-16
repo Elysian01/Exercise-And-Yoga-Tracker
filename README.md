@@ -1,6 +1,8 @@
 # Exercise-And-Yoga-Tracker
 
-<b><a href="https://elysian01.github.io/Exercise-And-Yoga-Tracker/">Click here</a> to visit website</b>
+<img src = "./static/demo.gif" width="400px" height = "400px">
+
+<b><a href="https://elysian01.github.io/Exercise-And-Yoga-Tracker/">Click here</a> to visit website.</b>
 
 ### With the need to be fit and healthy on the rise today, Yoga-Tracker proves to be a valuable solution. 
 
@@ -14,11 +16,11 @@
 
 ## Get Started
 
-<b>It is recommended to open website (index.html) in local machine using live server of vscode or any other Apache server, for fast loading of tensorflowjs model</b>
+<b>It is recommended to open website (index.html) in local machine using live server of vscode or any other Apache server, for fast loading of tensorflowjs model.</b>
 
 ## Classification
 
-It can classify 6 different yoga poses which are divided into 2 sets
+It can classify 6 different yoga poses which are divided into 2 sets:
 
 * Yoga Set 1
     1. Tree Pose
