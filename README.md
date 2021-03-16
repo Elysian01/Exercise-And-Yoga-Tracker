@@ -1,6 +1,6 @@
 # Exercise-And-Yoga-Tracker
 
-<img src = "./static/demo.gif" width="400px" height = "400px">
+<img src = "./static/demo.gif" width="600px" height = "300px">
 
 <b><a href="https://elysian01.github.io/Exercise-And-Yoga-Tracker/">Click here</a> to visit website.</b>
 
