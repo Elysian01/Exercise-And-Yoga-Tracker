@@ -121,11 +121,12 @@ async function initialize(yoga_set = "1") {
     }
     model = await tf.loadLayersModel(yoga_model_path);
 
-    if (model)
+    if (model) {
         console.log("Model Loaded " + yoga_set + "...")
-
-
+        $(".loader-wrapper").fadeOut("slow");
+    }
 }
+
 demosSection.classList.remove('invisible');
 
 function loadmodel() {
